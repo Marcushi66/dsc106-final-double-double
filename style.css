@@ -417,6 +417,13 @@ a {
   color: #9ca3af;
 }
 
+#sim-gold-value,
+#sim-kills-value {
+  display: inline-block;
+  width: 5ch;
+  text-align: right;
+}
+
 .content-center {
   max-width: 1000px;
   margin: 0 auto;
