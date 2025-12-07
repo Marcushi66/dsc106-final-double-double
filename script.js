@@ -462,15 +462,21 @@ function updateSim() {
 
   // caption
   let text;
-  if (pct < 40) {
+  if (pct < 20) {
     text =
-      "Your team is statistically behind based on the first 10 minutes, but comebacks are still possible.";
-  } else if (pct <= 60) {
+      "Your team is in a difficult early-game position — at this stage, pro teams usually need a major outplay or a stolen objective to turn the game around.";
+  } else if (pct < 40) {
     text =
-      "The game is relatively even at 10 minutes. Small decisions and teamfights can swing the outcome.";
+      "Your team is behind, but the game is still very playable. Securing the next dragon, trading towers, or winning a small skirmish can reopen the match.";
+  } else if (pct < 60) {
+    text =
+      "The game is effectively even. Control over vision, rotations, and early objectives will determine who takes momentum from here.";
+  } else if (pct < 80) {
+    text =
+      "Your team holds a solid early advantage. Teams in this position often convert it into better map control and more reliable objective setups.";
   } else {
     text =
-      "Your team has a strong early lead. Historically, teams in this position convert their advantage into a win.";
+      "Your team is far ahead — the kind of early position where pro teams usually snowball cleanly into a win… unless someone decides to ‘limit test.’";
   }
   captionEl.textContent = text;
 }
