@@ -402,6 +402,7 @@ function getFirstDragonValue() {
   if (!selected) return 0;
 
   if (selected.value === "your") return 1;
+  if (selected.value === "none") return 0.5;
   return 0; // enemy or none both map to 0
 }
 
